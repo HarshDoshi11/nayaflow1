@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ScoreCard from "@/components/ScoreCard";
+import { Link } from "react-router-dom";
 import { 
   RefreshCw, 
   Upload, 
@@ -68,9 +69,16 @@ const Dashboard = () => {
               </p>
             </div>
             <div className="flex gap-3">
-              <Button variant="outline" size="sm">
-                <Upload className="h-4 w-4 mr-2" />
-                Upload Data
+              <Button variant="ghost" size="sm" asChild>
+                <Link to="/">
+                  Home
+                </Link>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <Link to="/upload">
+                  <Upload className="h-4 w-4 mr-2" />
+                  Upload Data
+                </Link>
               </Button>
               <Button 
                 onClick={handleRunAgent}
@@ -196,13 +204,17 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <Button variant="outline" className="justify-start">
-                    <DollarSign className="h-4 w-4 mr-2" />
-                    View Loan Offers
+                  <Button variant="outline" className="justify-start" asChild>
+                    <Link to="/offers">
+                      <DollarSign className="h-4 w-4 mr-2" />
+                      View Loan Offers
+                    </Link>
                   </Button>
-                  <Button variant="outline" className="justify-start">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    Payment Planner
+                  <Button variant="outline" className="justify-start" asChild>
+                    <Link to="/planner">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      Payment Planner
+                    </Link>
                   </Button>
                 </div>
               </CardContent>

@@ -85,7 +85,7 @@ const Landing = () => {
                 Reviews
               </a>
               <Button variant="fintech" size="sm" asChild>
-                <Link to="/dashboard">Get Started</Link>
+                <Link to="/auth">Get Started</Link>
               </Button>
             </nav>
           </div>
@@ -115,7 +115,7 @@ const Landing = () => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/dashboard">
+                  <Link to="/auth">
                     Start Free Assessment
                     <ArrowRight className="h-5 w-5" />
                   </Link>
@@ -281,7 +281,7 @@ const Landing = () => {
             Join thousands of gig workers who've already improved their financial future with NayaScore
           </p>
           <Button variant="secondary" size="xl" asChild>
-            <Link to="/dashboard">
+            <Link to="/auth">
               Get Started Free
               <ArrowRight className="h-5 w-5" />
             </Link>
