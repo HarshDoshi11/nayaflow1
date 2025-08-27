@@ -40,7 +40,7 @@ const ScoreCard = ({
     <Card className="bg-gradient-card shadow-glow border-0">
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center justify-between">
-          <span className="text-xl font-bold">Your NayaScore</span>
+          <span className="text-xl font-bold">Your NayaFlow</span>
           <Badge 
             variant="secondary" 
             className={`bg-${scoreColor} text-white border-0`}
@@ -133,7 +133,7 @@ const ScoreCard = ({
               <span>300</span>
               <span>900</span>
             </div>
-            <div className="relative h-2 bg-gradient-to-r from-score-poor via-score-fair via-score-good to-score-excellent rounded-full">
+            <div className="relative h-2 bg-gradient-to-r from-score-poor  via-score-good to-score-excellent rounded-full">
               <div 
                 className="absolute top-0 h-2 w-2 bg-foreground rounded-full transform -translate-x-1/2"
                 style={{ left: `${((score - 300) / 600) * 100}%` }}

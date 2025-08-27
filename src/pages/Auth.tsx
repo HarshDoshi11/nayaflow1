@@ -86,7 +86,7 @@ const Auth = () => {
               <span className="text-white font-bold">N</span>
             </div>
             <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              NayaScore
+              NayaFlow
             </span>
           </div>
           <h1 className="text-3xl font-bold mb-2">Welcome</h1>
