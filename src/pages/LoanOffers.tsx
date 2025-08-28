@@ -100,6 +100,39 @@ const LoanOffers = () => {
           </div>
         </div>
       </header>
+      <div
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 999,
+          background:
+            "linear-gradient(to right, rgba(239,68,68,0.2), rgba(185,28,28,0.25))",
+          whiteSpace: "nowrap",
+          fontWeight: "bold",
+          color: "rgba(255,255,255,0.5)",
+          overflow: "hidden", // 🔥 ensures no scrollbars
+        }}
+      >
+        <div
+          style={{
+            display: "inline-block",
+            paddingLeft: "20%", 
+            animation: "marquee 15s linear infinite",
+          }}
+        >
+          This is demo data — values are placeholders for preview.
+        </div>
+
+        <style>
+          {`
+            @keyframes marquee {
+              0%   { transform: translateX(100%); }
+              100% { transform: translateX(-100%); }
+            }
+          `}
+        </style>
+      </div>
+
 
       <main className="container mx-auto px-4 py-8">
         {/* EMI Calculator */}

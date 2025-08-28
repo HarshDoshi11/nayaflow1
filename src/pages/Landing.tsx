@@ -303,7 +303,7 @@ const Landing = () => {
               <img
                 src="LOGO.png"
                 alt="NayaFlow Logo"
-                className="h-9 w-auto object-contain"
+                className="h-12 w-2000 object-contain ml-2"
               />
             </div>
             <nav className="hidden md:flex items-center gap-6">
@@ -350,36 +350,38 @@ const Landing = () => {
             </nav>
           </div>
         </div>
-        <div style={{
-  position: "sticky",
-  top: 0,
-  zIndex: 50,
-  background: "linear-gradient(to right, rgba(239,68,68,0.2), rgba(185,28,28,0.2))",
-  overflow: "hidden",
-  whiteSpace: "nowrap",
-  fontWeight: "bold",
-  opacity: 1,
-  color: "rgba(255,255,255,0.7)",
-}}>
-  <div style={{
-    display: "inline-block",
-    paddingLeft: "100%",        // start off screen
-    animation: "marquee 20s linear infinite"
-  }}>
-    This is demo data — values are placeholders for preview.
-  </div>
+      <div
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 999,
+          background:
+            "linear-gradient(to right, rgba(239,68,68,0.2), rgba(185,28,28,0.25))",
+          whiteSpace: "nowrap",
+          fontWeight: "bold",
+          color: "rgba(255,255,255,0.5)",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            display: "inline-block",
+            paddingLeft: "20%",
+            animation: "marquee 15s linear infinite",
+          }}
+        >
+          This is demo data — values are placeholders for preview.
+        </div>
 
-  <style>
-    {`
-      @keyframes marquee {
-        0%   { transform: translateX(0); }
-        100% { transform: translateX(-100%); }
-      }
-    `}
-  </style>
-</div>
-
-
+        <style>
+          {`
+            @keyframes marquee {
+              0%   { transform: translateX(100%); }
+              100% { transform: translateX(-100%); }
+            }
+          `}
+        </style>
+      </div>
       </header>
 
       {/* Hero */}
@@ -412,7 +414,7 @@ const Landing = () => {
                 </Button>
                 <Button variant="outline" size="xl" asChild>
   <a
-    href="https://youtu.be/xvFZjo5PgG0?si=09UFsn4ENC-lMocb"
+    href="https://youtu.be/xvFZjo5PgG0?si=09UFsn4ENC-lMocb" //rickroll
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -450,13 +452,7 @@ const Landing = () => {
       </section>
          {/* Hero Section */}
 <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background">
-  {/* ...your existing hero code... */}
 </section>
-{/* Moving text banner */}
-
-
-
-
       {/* Features */}
       <section id="features" className="py-20">
         <div className="container mx-auto px-4">
@@ -638,41 +634,24 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12">
-        
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-            <div>
-              <div className="mb-4 flex items-center gap-2">
-                <img
-                  src="favicon.ico"
-                  alt="NayaFlow Logo"
-                  className="h-6 w-6 rounded-lg object-contain"
-                />
-                <span className="text-xl font-bold">NayaFlow</span>
-              </div>
-              <p className="text-sm text-muted-foreground" />
-            </div>
-
-            <div>
-              <h4 className="mb-4 font-semibold">Company</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="#" className="hover:text-foreground">About</a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-foreground">Contact</a>
-                </li>
-              </ul>
-            </div>
+      <footer className="mt-8 border-t border-border pt-8 text-sm text-muted-foreground">
+        <div className="grid grid-cols-3 items-center">
+          <div className="flex items-center gap-2 pb-8 pl-4">
+            <img
+              src="favicon.ico"
+              alt="NayaFlow Logo"
+              className="h-6 w-6 rounded-lg object-contain"
+            />
+            <span className="text-xl font-bold">NayaFlow</span>
           </div>
 
-          <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
+          <div className="text-center pb-8">
             © 2025 NayaFlow. All rights reserved.
           </div>
+          <div></div>
         </div>
       </footer>
+
 
       {/* Agent Modal */}
       <Modal
