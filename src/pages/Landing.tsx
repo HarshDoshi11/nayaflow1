@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import ThemeToggle from "@/components/Theme/ThemeToggle";
 import heroImage from "@/assets/hero-image.png";
-
+import DemoBanner from "@/components/Banner/banner";
 
 
 import {
@@ -48,6 +48,7 @@ const Modal = ({ open, onClose, children, title }) => {
         </div>
         <div className="p-4">{children}</div>
       </div>
+      
     </div>
   );
 };
@@ -349,6 +350,36 @@ const Landing = () => {
             </nav>
           </div>
         </div>
+        <div style={{
+  position: "sticky",
+  top: 0,
+  zIndex: 50,
+  background: "linear-gradient(to right, rgba(239,68,68,0.2), rgba(185,28,28,0.2))",
+  overflow: "hidden",
+  whiteSpace: "nowrap",
+  fontWeight: "bold",
+  opacity: 1,
+  color: "rgba(255,255,255,0.7)",
+}}>
+  <div style={{
+    display: "inline-block",
+    paddingLeft: "100%",        // start off screen
+    animation: "marquee 20s linear infinite"
+  }}>
+    This is demo data — values are placeholders for preview.
+  </div>
+
+  <style>
+    {`
+      @keyframes marquee {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+      }
+    `}
+  </style>
+</div>
+
+
       </header>
 
       {/* Hero */}
@@ -638,7 +669,7 @@ const Landing = () => {
           </div>
 
           <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            © 2024 NayaFlow. All rights reserved.
+            © 2025 NayaFlow. All rights reserved.
           </div>
         </div>
       </footer>
@@ -656,3 +687,4 @@ const Landing = () => {
 };
 
 export default Landing;
+

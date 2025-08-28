@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ScoreCard from "@/components/ScoreCard";
 import { Link } from "react-router-dom";
-import Banner from "@/components/Banner/banner";
 
 
 

@@ -29,7 +29,6 @@ const App = () => (
           <Route path="/offers" element={<LoanOffers />} />
           <Route path="/planner" element={<PaymentPlanner />} />
           <Route path="/upload" element={<DataUpload />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
