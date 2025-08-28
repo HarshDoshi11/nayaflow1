@@ -47,8 +47,8 @@ const TextType = ({
   cursorCharacter = "|",
   cursorClassName = "",
   cursorBlinkDuration = 0.5,
-  textColors = ["#000000"],
-  darkTextColors = ["#ffffff"], // default for dark mode
+  textColors = [""],
+  darkTextColors = ["#bababa"], 
   variableSpeed,
   onSentenceComplete,
   startOnVisible = false,

@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import TextType from "./TextType.tsx";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import ThemeToggle from "@/components/Theme/ThemeToggle";
 import heroImage from "@/assets/hero-image.png";
-import TextType from './TextType';
+
 
 import {
   Shield,
@@ -295,7 +296,7 @@ const Landing = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border bg-card/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-1">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <img
@@ -382,6 +383,7 @@ const Landing = () => {
       </div>
       </header>
 
+      {/* Hero */}
       <section className="bg-gradient-to-br from-background via-muted/20 to-background py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
@@ -391,19 +393,20 @@ const Landing = () => {
                   Smart AI Credit Scoring
                 </Badge>
                 <h1 className="text-4xl font-bold leading-tight md:text-6xl">
-                  <TextType
-                    text={["Credit Scoring for Gig Workers"]}
-                    typingSpeed={75}
-                    deletingSpeed={100}
-                    pauseDuration={1500}
-                    showCursor={true}
-                    cursorCharacter="|"
-                    className="text-black dark:text-white" 
-                  />
+                  Credit Scoring for{" "}
+                  <span className="bg-gradient-hero bg-clip-text text-transparent">
+                    Gig Workers
+                  </span>
                 </h1>
                 <p className="text-xl leading-relaxed text-muted-foreground">
-                  Get fair credit scores that understand your irregular income.
-                  AI-powered insights, personalized coaching, and access to affordable loans.
+                  <TextType
+                    text={"Get fair credit scores that understand your irregular income. Get AI-powered insights, personalized coaching, and access to affordable loans."}
+                    typingSpeed={60}   //actual mai its time
+                    deletingSpeed={22}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|" 
+                  />
                 </p>
               </div>
 
@@ -452,10 +455,10 @@ const Landing = () => {
           </div>
         </div>
       </section>
-         {/* Hero Section */}
-<section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background">
+
+<section className="py-5 bg-gradient-to-br from-background via-muted/20 to-background">
 </section>
-      {/* Features */}
+
       <section id="features" className="py-20">
         <div className="container mx-auto px-4">
           <div className="mb-16 text-center">
@@ -536,7 +539,7 @@ const Landing = () => {
       </section>
 
       {/* How it Works */}
-      <section id="how-it-works" className="bg-muted/10 py-20">
+      <section id="how-it-works" className="bg-muted/10 py-0">
         <div className="container mx-auto px-4">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">How NayaFlow Works</h2>
