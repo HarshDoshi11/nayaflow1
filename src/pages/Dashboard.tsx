@@ -65,7 +65,11 @@ const Dashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                NayaFlow Dashboard
+                <img
+                src="LOGO.png"
+                alt="NayaFlow Logo"
+                className="w-74 h-12 mb-5"
+                />
               </h1>
               <p className="text-sm text-muted-foreground">
                 Your personalized credit insights and coaching

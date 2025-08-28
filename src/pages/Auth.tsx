@@ -49,7 +49,7 @@ const Auth = () => {
       if (error) throw error;
 
       toast.success("Check your email for the confirmation link!");
-    } catch (error: any) {
+    } catch (error) {
       toast.error(error.message);
     } finally {
       setIsLoading(false);
@@ -69,7 +69,7 @@ const Auth = () => {
       if (error) throw error;
 
       toast.success("Welcome back!");
-    } catch (error: any) {
+    } catch (error) {
       toast.error(error.message);
     } finally {
       setIsLoading(false);
@@ -81,13 +81,12 @@ const Auth = () => {
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="h-10 w-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">N</span>
-            </div>
-            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              NayaFlow
-            </span>
+          <div className="gap-2 flex items-center justify-center">
+              <img
+                src="LOGO.png"
+                alt="NayaFlow Logo"
+                className="w-74 h-24 mb-5"
+              />
           </div>
           <h1 className="text-3xl font-bold mb-2">Welcome</h1>
           <p className="text-muted-foreground">Sign in to your account or create a new one</p>

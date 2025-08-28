@@ -6,7 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import ThemeToggle from "@/components/Theme/ThemeToggle";
 import heroImage from "@/assets/hero-image.png";
-import DemoBanner from "@/components/Banner/banner";
 
 
 import {
@@ -311,7 +310,7 @@ const Landing = () => {
                 <ThemeToggle />
               </div>
               <a
-  href="https://github.com/HarshDoshi11/nayaflow"
+  href="https://github.com/HarshDoshi11/nayaflow1"
   target="_blank"
   rel="noopener noreferrer"
   className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-smooth"
