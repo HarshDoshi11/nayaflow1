@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import ThemeToggle from "@/components/Theme/ThemeToggle";
 import heroImage from "@/assets/hero-image.png";
-
+import TextType from './TextType';
 
 import {
   Shield,
@@ -383,7 +382,6 @@ const Landing = () => {
       </div>
       </header>
 
-      {/* Hero */}
       <section className="bg-gradient-to-br from-background via-muted/20 to-background py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
@@ -393,10 +391,15 @@ const Landing = () => {
                   Smart AI Credit Scoring
                 </Badge>
                 <h1 className="text-4xl font-bold leading-tight md:text-6xl">
-                  Credit Scoring for{" "}
-                  <span className="bg-gradient-hero bg-clip-text text-transparent">
-                    Gig Workers
-                  </span>
+                  <TextType
+                    text={["Credit Scoring for Gig Workers"]}
+                    typingSpeed={75}
+                    deletingSpeed={100}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    className="text-black dark:text-white" 
+                  />
                 </h1>
                 <p className="text-xl leading-relaxed text-muted-foreground">
                   Get fair credit scores that understand your irregular income.
