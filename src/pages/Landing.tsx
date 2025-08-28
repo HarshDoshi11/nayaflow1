@@ -349,38 +349,27 @@ const Landing = () => {
             </nav>
           </div>
         </div>
-      <div
-        style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 999,
-          background:
-            "linear-gradient(to right, rgba(239,68,68,0.2), rgba(185,28,28,0.25))",
-          whiteSpace: "nowrap",
-          fontWeight: "bold",
-          color: "rgba(255,255,255,0.5)",
-          overflow: "hidden",
-        }}
-      >
         <div
-          style={{
-            display: "inline-block",
-            paddingLeft: "20%",
-            animation: "marquee 15s linear infinite",
-          }}
+          className="sticky top-0 z-50 bg-gradient-to-r from-red-400/30 to-red-800/35 whitespace-nowrap font-bold overflow-hidden text-neutral-400 dark:text-neutral-300"
         >
-          This is demo data — values are placeholders for preview.
+          <div
+            style={{
+              display: "inline-block",
+              paddingLeft: "20%",
+              animation: "marquee 15s linear infinite",
+            }}
+          >
+            This is demo data — values are placeholders for preview.
+          </div>
+          <style>
+            {`
+              @keyframes marquee {
+                0%   { transform: translateX(100%); }
+                100% { transform: translateX(-100%); }
+              }
+            `}
+          </style>
         </div>
-
-        <style>
-          {`
-            @keyframes marquee {
-              0%   { transform: translateX(100%); }
-              100% { transform: translateX(-100%); }
-            }
-          `}
-        </style>
-      </div>
       </header>
 
       {/* Hero */}
